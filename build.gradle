@@ -1,0 +1,20 @@
+apply plugin: 'jetty'
+apply plugin: 'war'
+
+war {
+    baseName = 'sample'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.hsqldb:hsqldb:2.3.2'
+    compile fileTree(dir: 'lib', include: '*.jar')
+    providedCompile 'jetty:servlet-api:2.5-6.0.2'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.1'
+}
