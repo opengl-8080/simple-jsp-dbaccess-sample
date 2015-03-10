@@ -9,7 +9,7 @@ import net.sf.persist.Persist;
 
 public class DBAccess {
     
-    public static DBAccess instance = new DBAccess();
+    public static final DBAccess instance = new DBAccess();
     private Persist persist;
     
     private DBAccess() {
