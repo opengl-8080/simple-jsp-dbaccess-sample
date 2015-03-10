@@ -12,7 +12,7 @@ public class DBAccess {
     public static DBAccess instance = new DBAccess();
     private Persist persist;
     
-    public DBAccess() {
+    private DBAccess() {
         this.connectDatabase();
         this.initializeDatabase();
     }
